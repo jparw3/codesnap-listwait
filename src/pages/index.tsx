@@ -13,11 +13,12 @@ import { NextSeo } from "next-seo";
 
 export default function Home() {
   const [showModel, setShowModel] = useState(false);
-
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
   const submitData = async (e: React.SyntheticEvent) => {
+    setLoading(true);
     e.preventDefault();
     try {
       const body = { name, email };
@@ -30,6 +31,7 @@ export default function Home() {
     } catch (error) {
       console.error(error);
     }
+    setLoading(false);
   };
 
   return (
@@ -113,6 +115,7 @@ export default function Home() {
             type="email"
           />
           <Button
+            loading={loading}
             disabled={!name || !email}
             onClick={submitData}
             className="mt-2"

@@ -6,9 +6,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: boolean;
   children: React.ReactNode;
   disabled?: boolean;
+  loading?: boolean;
 }
 
-export function Button({ children, ...props }: ButtonProps) {
+export function Button({ children, loading, ...props }: ButtonProps) {
   return (
     <button
       disabled={props.disabled}
@@ -20,8 +21,24 @@ export function Button({ children, ...props }: ButtonProps) {
         props.className
       )}
     >
-      {children}
-      {props.icon && (
+      {loading ? (
+        <svg
+          className="animate-spin mx-auto"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+        >
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            d="M12 3a9 9 0 0 1 9 9h-2a7 7 0 0 0-7-7V3z"
+            fill="rgba(255,255,255,1)"
+          />
+        </svg>
+      ) : (
+        children
+      )}
+      {!loading && props.icon && (
         <svg
           className="absolute top-3 right-3 stroke-white"
           width="24"
