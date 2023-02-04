@@ -15,7 +15,7 @@ export function Button({ children, loading, ...props }: ButtonProps) {
       disabled={props.disabled}
       {...props}
       className={clsx(
-        "w-full h-12 text-white relative font-medium leading-6 text-center bg-[rgb(38,38,44)] rounded-lg cursor-pointer transition-[all_300ms_ease_0s]",
+        "w-full group h-12 text-white relative font-medium leading-6 text-center bg-[rgb(38,38,44)] rounded-lg cursor-pointer transition-[all_300ms_ease_0s]",
         "hover:bg-[rgb(20,20,26)] hover:text-white",
         "disabled:bg-[rgb(20,20,26)] disabled:text-[rgb(75,75,88)] disabled:cursor-not-allowed",
         props.className
@@ -40,7 +40,7 @@ export function Button({ children, loading, ...props }: ButtonProps) {
       )}
       {!loading && props.icon && (
         <svg
-          className="absolute top-3 right-3 stroke-white"
+          className="absolute top-3 right-3 stroke-white group-hover:translate-x-1 duration-500 transition ease-in-out"
           width="24"
           height="24"
           fill="none"

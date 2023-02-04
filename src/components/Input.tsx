@@ -12,14 +12,15 @@ export function Input({ type = "text", ...props }: InputProps) {
         type={type}
         placeholder={type === "email" ? "Email address..." : "Full name..."}
         className={clsx(
-          "relative box-border w-full h-12 bg-[rgb(7,7,13)] border-[1.2px] border-[rgb(38,38,44)] rounded-lg text-sm p-[11px_12px_12px_46px] outline-none transition-[all_300ms_ease_0s] text-white",
-          "hover:bg-[rgb(20,20,26)] border-[rgb(20,20,26)] text-[rgb(156,156,171)]",
-          "[&:focus:active:not(:placeholder-shown):border-[rgb(75,75,88)]] [&:focus:active:not(:placeholder-shown):text-white]"
+          type === "text" ? 'capitalize' : null,
+          "relative  box-border w-full h-12 bg-[rgb(7,7,13)] border-[1.2px] border-[rgb(38,38,44)] rounded-lg text-sm p-[11px_12px_12px_46px] outline-none transition duration-[350ms] text-white",
+          "hover:bg-[rgb(20,20,26)] cursor-pointer border-[rgb(20,20,26)] text-[rgb(156,156,171)]",
+          "border-2 [&:focus:active:not(:placeholder-shown):text-white] focus:border-[rgb(75,_75,_88)] focus:bg-[rgb(20,20,26)]"
         )}
       />
-      {type === "email" ? (
+      {type === "text" ? (
         <svg
-          className="absolute top-3 left-3"
+          className="absolute top-3 left-3 pointer-events-none"
           width="24"
           height="24"
           fill="none"
@@ -33,7 +34,7 @@ export function Input({ type = "text", ...props }: InputProps) {
         </svg>
       ) : (
         <svg
-          className="absolute top-3 left-3"
+          className="absolute top-3 left-3 pointer-events-none"
           width="24"
           height="24"
           fill="none"

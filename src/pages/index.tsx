@@ -4,18 +4,20 @@ import { GlowLineTwo } from "@ui/GlowingLineTwo";
 import { Wrapper } from "@ui/Wrapper";
 import { Input } from "@ui/Input";
 import { Button } from "@ui/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Model } from "@ui/Model";
 import { Circle } from "@ui/Circle";
-import { motion } from "framer-motion";
-import Head from "next/head";
+import { AnimatePresence, motion } from "framer-motion";
 import { NextSeo } from "next-seo";
+import * as EmailValidator from 'email-validator';
+import { MenuButton } from "@/components/Menu";
 
 export default function Home() {
   const [showModel, setShowModel] = useState(false);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
 
   const submitData = async (e: React.SyntheticEvent) => {
     setLoading(true);
@@ -59,6 +61,7 @@ export default function Home() {
       <Stars />
       <GlowLineOne />
       <GlowLineTwo />
+      {/* <MenuButton/> */}
       <Wrapper>
         <Circle />
         <motion.p
@@ -114,9 +117,10 @@ export default function Home() {
             value={email}
             type="email"
           />
+            {!EmailValidator.validate(email) && email.length > 5 && <motion.p animate={{opacity: 100}} initial={{opacity: 0}} className="text-red-600 text-xs opacity-75">enter valid email</motion.p>}
           <Button
             loading={loading}
-            disabled={!name || !email}
+            disabled={!name || !EmailValidator.validate(email)}
             onClick={submitData}
             className="mt-2"
             icon

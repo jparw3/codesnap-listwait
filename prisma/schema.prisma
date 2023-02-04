@@ -17,3 +17,10 @@ model User {
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   @@map(name: "users")
 }
+
+model Update {
+  id            String       @default(cuid()) @id
+  title         String
+  message       String
+  date          String?
+}
