@@ -136,7 +136,7 @@ export default function Home({ drafts }: Props) {
             className="mt-2"
             icon
           >
-            Join the wailist
+            Join the waitlist
           </Button>
         </motion.form>
       </Wrapper>
