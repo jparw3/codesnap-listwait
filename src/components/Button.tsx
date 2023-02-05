@@ -23,27 +23,34 @@ export function Button({ children, loading, ...props }: ButtonProps) {
     >
       {loading ? (
         <svg
-          className="animate-spin mx-auto"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
+          className='animate-spin mx-auto'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 24 24'
+          width='24'
+          height='24'
         >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path d="M12 3a9 9 0 0 1 9 9h-2a7 7 0 0 0-7-7V3z" fill="rgba(255,255,255,1)" />
+          <path fill='none' d='M0 0h24v24H0z' />
+          <path
+            d='M12 3a9 9 0 0 1 9 9h-2a7 7 0 0 0-7-7V3z'
+            fill='rgba(255,255,255,1)'
+          />
         </svg>
       ) : (
         children
       )}
       {!loading && props.icon && (
         <svg
-          className="absolute top-3 right-3 stroke-white group-hover:translate-x-1 duration-500 transition ease-in-out"
-          width="24"
-          height="24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          className='absolute top-3 right-3 stroke-white group-hover:translate-x-1 duration-500 transition ease-in-out'
+          width='24'
+          height='24'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
         >
-          <path d="M18 12H6M13.5 7.5 18 12l-4.5 4.5" stroke="currentColor" stroke-width="1.5"></path>
+          <path
+            d='M18 12H6M13.5 7.5 18 12l-4.5 4.5'
+            stroke='currentColor'
+            stroke-width='1.5'
+          ></path>
         </svg>
       )}
     </button>

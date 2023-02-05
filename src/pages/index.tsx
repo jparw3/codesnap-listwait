@@ -56,12 +56,13 @@ export default function Home({ drafts }: Props) {
   return (
     <>
       <NextSeo
-        title="CodeSnap Waitlist"
+        title='CodeSnap Waitlist'
         description="Join the CodeSnap waitlist and get notified when it's released!"
         openGraph={{
           url: 'https://www.url.ie/a',
           title: 'CodeSnap Waitlist',
-          description: "Join the CodeSnap waitlist and get notified when it's released!",
+          description:
+            "Join the CodeSnap waitlist and get notified when it's released!",
           images: [
             {
               url: 'https://www.getcodesnap.app/og-image.png',
@@ -87,7 +88,7 @@ export default function Home({ drafts }: Props) {
             type: 'spring',
           }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-sm leading-4 text-center tracking-[0.04em] uppercase text-[rgb(75,75,88)] pt-6"
+          className='text-sm leading-4 text-center tracking-[0.04em] uppercase text-[rgb(75,75,88)] pt-6'
         >
           CREATE, STORE & SHARE
         </motion.p>
@@ -98,7 +99,7 @@ export default function Home({ drafts }: Props) {
             type: 'spring',
           }}
           animate={{ y: 0, opacity: 1 }}
-          className="flex flex-col pt-2 text-4xl text-center text-transparent md:text-5xl bg-clip-text bg-graydient"
+          className='flex flex-col pt-2 text-4xl text-center text-transparent md:text-5xl bg-clip-text bg-graydient'
         >
           Join the waitlist for
           <motion.span
@@ -108,7 +109,7 @@ export default function Home({ drafts }: Props) {
               type: 'spring',
             }}
             animate={{ y: 0, opacity: 1 }}
-            className="font-semibold text-transparent bg-codesnap-gradient bg-clip-text"
+            className='font-semibold text-transparent bg-codesnap-gradient bg-clip-text'
           >
             CodeSnap!
           </motion.span>
@@ -120,12 +121,25 @@ export default function Home({ drafts }: Props) {
             type: 'spring',
           }}
           animate={{ y: 0, opacity: 1 }}
-          className="flex flex-col gap-4 mt-12 w-80"
+          className='flex flex-col gap-4 mt-12 w-80'
         >
-          <Input autoFocus onChange={(e) => setName(e.target.value)} value={name} type="text" />
-          <Input onChange={(e) => setEmail(e.target.value)} value={email} type="email" />
+          <Input
+            autoFocus
+            onChange={e => setName(e.target.value)}
+            value={name}
+            type='text'
+          />
+          <Input
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+            type='email'
+          />
           {!EmailValidator.validate(email) && email.length > 5 && (
-            <motion.p animate={{ opacity: 100 }} initial={{ opacity: 0 }} className="text-xs text-red-600 opacity-75">
+            <motion.p
+              animate={{ opacity: 100 }}
+              initial={{ opacity: 0 }}
+              className='text-xs text-red-600 opacity-75'
+            >
               enter valid email
             </motion.p>
           )}
@@ -133,7 +147,7 @@ export default function Home({ drafts }: Props) {
             loading={loading}
             disabled={!name || !EmailValidator.validate(email)}
             onClick={submitData}
-            className="mt-2"
+            className='mt-2'
             icon
           >
             Join the waitlist

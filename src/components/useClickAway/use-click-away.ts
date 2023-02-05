@@ -2,7 +2,10 @@ import { MutableRefObject, useEffect, useRef } from 'react'
 
 export type ClickAwayGetContainer = () => HTMLElement | null
 
-const useClickAway = (ref: MutableRefObject<HTMLElement | undefined>, handler: (event: Event) => void) => {
+const useClickAway = (
+  ref: MutableRefObject<HTMLElement | undefined>,
+  handler: (event: Event) => void,
+) => {
   const handlerRef = useRef(handler)
   useEffect(() => {
     handlerRef.current = handler
