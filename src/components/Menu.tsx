@@ -17,7 +17,7 @@ export function MenuButton(updates: any) {
   useClickAway(ref, () => setMenuShown(false))
 
   return (
-    <div ref={ref} className="absolute top-5 right-5">
+    <div ref={ref} className="absolute z-50 top-5 right-5">
       <div className="relative">
         <button
           type="button"
