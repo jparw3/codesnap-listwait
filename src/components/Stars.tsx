@@ -1,5 +1,5 @@
-import * as React from "react";
-import { motion } from "framer-motion";
+import * as React from 'react'
+import { motion } from 'framer-motion'
 
 export function Stars() {
   return (
@@ -9,10 +9,10 @@ export function Stars() {
         transition={{
           duration: 10,
           repeat: Infinity,
-          repeatType: "reverse",
+          repeatType: 'reverse',
         }}
         className="w-[40vw] h-[40vh] rounded-full absolute left-[calc(50%_-_20vw)] top-[5vw] bg-stars"
       />
     </div>
-  );
+  )
 }

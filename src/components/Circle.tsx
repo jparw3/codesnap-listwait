@@ -1,24 +1,19 @@
-import * as React from "react";
-import clsx from "clsx";
-import { motion } from "framer-motion";
+import * as React from 'react'
+import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 interface CircleProps extends React.HTMLAttributes<HTMLDivElement> {
-  type?: "logo" | "tick";
+  type?: 'logo' | 'tick'
 }
 
-export function Circle({ type = "logo", ...props }: CircleProps) {
+export function Circle({ type = 'logo', ...props }: CircleProps) {
   return (
-    <div
-      className={clsx(
-        "md:mt-0",
-        "flex items-center justify-center relative mt-12 w-36 h-36"
-      )}
-    >
+    <div className={clsx('md:mt-0', 'flex items-center justify-center relative mt-12 w-36 h-36')}>
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         transition={{
           duration: 0.5,
-          type: "spring",
+          type: 'spring',
         }}
         animate={{ y: 0, opacity: 1 }}
         className="circle-one"
@@ -27,7 +22,7 @@ export function Circle({ type = "logo", ...props }: CircleProps) {
         initial={{ y: 30, opacity: 0 }}
         transition={{
           delay: 0.1,
-          type: "spring",
+          type: 'spring',
         }}
         animate={{ y: 0, opacity: 1 }}
         className="circle-two"
@@ -37,17 +32,17 @@ export function Circle({ type = "logo", ...props }: CircleProps) {
         transition={{
           delay: 0.2,
 
-          type: "spring",
+          type: 'spring',
         }}
         animate={{ y: 0, opacity: 1 }}
         className="circle-three"
       />
-      {type === "logo" ? (
+      {type === 'logo' ? (
         <motion.svg
           initial={{ y: 30, opacity: 0 }}
           transition={{
             delay: 0.3,
-            type: "spring",
+            type: 'spring',
           }}
           animate={{ y: 0, opacity: 1 }}
           width="48"
@@ -126,17 +121,12 @@ export function Circle({ type = "logo", ...props }: CircleProps) {
           initial={{ y: 30, opacity: 0 }}
           transition={{
             delay: 0.3,
-            type: "spring",
+            type: 'spring',
           }}
           animate={{ y: 0, opacity: 1 }}
           className="w-20 h-20 absolute top-8 left-8 flex justify-center items-center bg-tick-gradient rounded-full"
         >
-          <svg
-            width="33"
-            height="26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="33" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m10.803 17.669.212.211.212-.211L28.517.424l3.458 3.448-20.96 20.904L.425 14.214l3.457-3.448 6.921 6.903Z"
               fill="url(#a)"
@@ -145,25 +135,11 @@ export function Circle({ type = "logo", ...props }: CircleProps) {
               stroke-width="0.6"
             ></path>
             <defs>
-              <linearGradient
-                id="a"
-                x1="16.2"
-                y1="0"
-                x2="16.2"
-                y2="36.225"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="a" x1="16.2" y1="0" x2="16.2" y2="36.225" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#fff"></stop>
                 <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
               </linearGradient>
-              <linearGradient
-                id="b"
-                x1="16.2"
-                y1="-8.269"
-                x2="16.2"
-                y2="18.9"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="b" x1="16.2" y1="-8.269" x2="16.2" y2="18.9" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#fff"></stop>
                 <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
               </linearGradient>
@@ -172,5 +148,5 @@ export function Circle({ type = "logo", ...props }: CircleProps) {
         </motion.div>
       )}
     </div>
-  );
+  )
 }

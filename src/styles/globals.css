@@ -1,4 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/inter");
+@import url('https://fonts.cdnfonts.com/css/inter');
 
 @tailwind base;
 @tailwind components;
@@ -10,35 +10,28 @@
   }
 
   .stars-mask {
-    mask: url("/stars.svg");
+    mask: url('/stars.svg');
   }
 }
 
 .circle-one {
   width: 144px;
   height: 144px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(255, 255, 255, 0) 64.93%
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 64.93%);
   border-radius: 999px;
   box-sizing: border-box;
   position: absolute;
 }
 
 .circle-one::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0px;
   border-radius: 999px;
   padding: 1px;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.06) 0%,
-      rgba(255, 255, 255, 0) 50%
-    ),
+  background: linear-gradient(rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 50%),
     linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 64.93%);
-  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px)
-      content-box content-box,
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box content-box,
     linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
   -webkit-mask-composite: xor;
 }
@@ -47,28 +40,21 @@
   border-radius: 999px;
   width: 112px;
   height: 112px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(255, 255, 255, 0) 29.46%
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 29.46%);
   position: absolute;
   top: 16px;
   left: 16px;
 }
 
 .circle-two::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0px;
   border-radius: 999px;
   padding: 1px;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.06) 0%,
-      rgba(255, 255, 255, 0) 50%
-    ),
+  background: linear-gradient(rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 50%),
     linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 64.93%);
-  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px)
-      content-box content-box,
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box content-box,
     linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
   -webkit-mask-composite: xor;
 }
@@ -77,10 +63,7 @@
   border-radius: 999px;
   width: 80px;
   height: 80px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(255, 255, 255, 0) 29.46%
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 29.46%);
   position: absolute;
   top: 32px;
   left: 32px;
@@ -92,18 +75,14 @@
 }
 
 .circle-three::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0px;
   border-radius: 999px;
   padding: 1px;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.06) 0%,
-      rgba(255, 255, 255, 0) 50%
-    ),
+  background: linear-gradient(rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 50%),
     linear-gradient(rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 64.93%);
-  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px)
-      content-box content-box,
+  -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box content-box,
     linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
   -webkit-mask-composite: xor;
 }
